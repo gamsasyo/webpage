@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ol1dog — 한 땀 한 땀, 우리 아이 이름</title>
+  <meta name="description" content="우리 아이 이름과 얼굴을 한 땀씩 수놓는 핸드메이드 산책용품, 올리독." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Gaegu:wght@400;700&family=Nanum+Pen+Script&family=Gowun+Dodum&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- 크레용 질감: 글자에 종이 결 구멍 -->
+      <filter id="crayon" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="7" result="grain" />
+        <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.9" result="mask" />
+        <feComposite in="SourceGraphic" in2="mask" operator="in" result="t" />
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="2" result="wobble" />
+        <feDisplacementMap in="t" in2="wobble" scale="3" />
+      </filter>
+      <!-- 자수 실 결 -->
+      <filter id="thread">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9 0.06" numOctaves="2" seed="3" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" />
+      </filter>
+      <symbol id="needle" viewBox="0 0 24 160">
+        <path d="M12 2 C15 2 16 6 16 12 L13 156 Q12 159 11 156 L8 12 C8 6 9 2 12 2Z" fill="url(#steel)" />
+        <ellipse cx="12" cy="13" rx="1.6" ry="5.5" fill="#F3EDE3" />
+      </symbol>
+      <linearGradient id="steel" x1="0" x2="1">
+        <stop offset="0" stop-color="#9a958e" /><stop offset=".45" stop-color="#e9e6e0" /><stop offset="1" stop-color="#8d8882" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <header class="nav">
+    <a href="#top" class="label-logo" aria-label="ol1dog 홈"><span>ol<b>1</b>dog</span></a>
+    <nav class="nav-links">
+      <a href="#make">자수 만들기</a>
+      <a href="#shop">숍</a>
+      <a href="#process">만드는 과정</a>
+    </nav>
+    <a class="btn btn-stitch btn-sm" data-store>스토어 ↗</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="hand-note">handmade embroidery for dogs ✿</p>
+        <h1 class="hero-title crayon">
+          <span class="line">한 땀 한 땀,</span>
+          <span class="line">우리 아이 <em class="scribble">이름<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C40 8 80 26 120 14 S180 10 196 18" /></svg></em>을</span>
+          <span class="line">수놓아요.</span>
+        </h1>
+        <p class="hero-sub">이름, 번호, 그리고 얼굴까지.<br />주문이 들어오면 그때부터 실을 꿰는<br />올리독의 핸드메이드 산책용품.</p>
+        <div class="hero-cta">
+          <a href="#make" class="btn btn-fill">내 자수 만들어보기</a>
+          <a href="#shop" class="btn btn-stitch">제품 둘러보기</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hoop">
+          <span class="hoop-screw" aria-hidden="true"></span>
+          <div class="hoop-fabric">
+            <img src="/img/cushion-check.jpg" alt="체크코튼 방석 위의 강아지들" />
+          </div>
+          <svg class="hoop-needle" aria-hidden="true"><use href="#needle" /></svg>
+        </div>
+        <div class="woven-tag" aria-hidden="true">
+          <span>ol<b>1</b>dog</span>
+          <small>made by hand</small>
+        </div>
+        <p class="hand-note arrow-note" aria-hidden="true">우리 집 아이 얼굴도<br />수놓을 수 있어요 ↙</p>
+      </div>
+
+      <svg class="hero-thread" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-20 120 C 200 40, 380 170, 620 110 S 1000 30, 1180 100 S 1400 150, 1460 70" />
+      </svg>
+    </section>
+
+    <!-- RIBBON -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>이름 자수</span><i>✿</i><span>얼굴 자수</span><i>✿</i><span>100% cotton</span><i>✿</i><span>사이즈 맞춤제작</span><i>✿</i><span>주문 후 제작</span><i>✿</i>
+        <span>이름 자수</span><i>✿</i><span>얼굴 자수</span><i>✿</i><span>100% cotton</span><i>✿</i><span>사이즈 맞춤제작</span><i>✿</i><span>주문 후 제작</span><i>✿</i>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZER -->
+    <section id="make" class="section make">
+      <div class="section-head center">
+        <p class="hand-note">the embroidery table</p>
+        <h2 class="crayon">이름을 적으면, 실이 꿰어져요</h2>
+        <div class="stitch-rule" aria-hidden="true"></div>
+      </div>
+
+      <div class="make-grid">
+        <div class="preview-wrap">
+          <div class="preview stitched" id="preview">
+            <div class="strap" id="strap">
+              <span class="stitch top"></span>
+              <span class="emb" id="emb">BORI ♡</span>
+              <span class="stitch bottom"></span>
+            </div>
+            <div class="hardware"></div>
+            <p class="hand-note pv-note">여기에 한 땀씩 ↓</p>
+          </div>
+          <div class="preview-meta">
+            <span id="meta-item">이름 리드줄</span>
+            <span class="hang-tag" id="meta-price">14,900원</span>
+          </div>
+        </div>
+
+        <form class="controls" id="controls" autocomplete="off">
+          <fieldset>
+            <legend><b>1</b>무엇을 만들까요</legend>
+            <div class="seg" id="ctl-item"></div>
+          </fieldset>
+          <fieldset>
+            <legend><b>2</b>아이 이름 <small>최대 8자</small></legend>
+            <input id="ctl-name" type="text" maxlength="8" value="BORI" aria-label="반려견 이름" />
+            <div class="seg icons" id="ctl-icon"></div>
+          </fieldset>
+          <fieldset>
+            <legend><b>3</b>웨빙 원단 <small id="webbing-name">오트</small></legend>
+            <div class="fabrics" id="ctl-webbing"></div>
+          </fieldset>
+          <fieldset>
+            <legend><b>4</b>자수 실 <small id="thread-name">아이보리</small></legend>
+            <div class="spools" id="ctl-thread"></div>
+          </fieldset>
+          <a class="btn btn-fill btn-block" data-store>이 조합으로 주문하러 가기 ↗</a>
+        </form>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop" class="section shop">
+      <div class="section-head row">
+        <div>
+          <p class="hand-note">the collection</p>
+          <h2 class="crayon">한 땀씩 완성된 것들</h2>
+        </div>
+        <div class="tabs" id="chips" role="tablist"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section process">
+      <div class="section-head center">
+        <p class="hand-note">how it's made</p>
+        <h2 class="crayon">미싱 앞에서 완성되는 하나</h2>
+        <div class="stitch-rule" aria-hidden="true"></div>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span class="step-no">01</span><h3>이름을 받아요</h3><p>이름, 연락처, 원하는 아이콘. 주문서가 곧 도안이 돼요.</p></li>
+        <li class="reveal"><span class="step-no">02</span><h3>실 색을 맞춰요</h3><p>웨빙 원단 위에 어울리는 실을 하나씩 대어 보고 골라요.</p></li>
+        <li class="reveal"><span class="step-no">03</span><h3>한 땀씩 수놓아요</h3><p>글자 한 자 한 자, 실이 촘촘히 쌓여 도톰하게 올라와요.</p></li>
+        <li class="reveal"><span class="step-no">04</span><h3>미싱으로 마감해요</h3><p>버클과 고리를 달고 끝단을 박음질해 튼튼하게 완성해요.</p></li>
+      </ol>
+
+      <div class="bento">
+        <figure class="cell c-photo reveal"><img src="/img/collar-cotton.jpg" alt="파스텔 컬러 이름 자수 코튼 목줄" /></figure>
+        <article class="cell c-butter reveal">
+          <span class="big crayon">100% cotton</span>
+          <p>코튼 라인은 면사와 면웨빙으로. 매일 피부에 닿는 건 부드러워야 하니까요.</p>
+        </article>
+        <article class="cell c-sage reveal">
+          <span class="big crayon">S — XL</span>
+          <p>목둘레, 가슴둘레에 맞춰 재단해요. 소형견부터 대형견까지.</p>
+        </article>
+        <figure class="cell c-photo tall reveal"><img src="/img/lead-cotton.jpg" alt="벽에 걸린 이름 자수 코튼 리드줄" /></figure>
+        <article class="cell c-rose reveal">
+          <span class="big crayon">인식표가 필요 없게</span>
+          <p>하네스 자체가 인식표. 혹시 길을 잃어도, 수놓인 이름과 번호가 먼저 말해줘요.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- NUMBERS -->
+    <section class="section numbers">
+      <div class="label-num reveal"><strong data-count="reviews">0</strong><span>누적 리뷰</span></div>
+      <div class="label-num reveal"><strong data-count="rating">0</strong><span>평균 별점</span></div>
+      <div class="label-num reveal"><strong>100%</strong><span>주문 후 제작</span></div>
+      <p class="num-note">* 2026.10 네이버 쇼핑 노출 상품 기준</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery">
+      <div class="section-head row">
+        <div>
+          <p class="hand-note">from our feed</p>
+          <h2 class="crayon">@ol1dog</h2>
+        </div>
+        <a class="btn btn-stitch" data-insta>인스타그램 ↗</a>
+      </div>
+      <div class="polaroids">
+        <figure><img src="/img/harness-vest.jpg" alt="조끼 하네스" loading="lazy" /><figcaption>조끼 하네스</figcaption></figure>
+        <figure><img src="/img/collar-marong.jpg" alt="마롱 목줄" loading="lazy" /><figcaption>마롱 시리즈</figcaption></figure>
+        <figure><img src="/img/pouch-check.jpg" alt="체크코튼 파우치" loading="lazy" /><figcaption>체크코튼 파우치</figcaption></figure>
+        <figure><img src="/img/bag-check.jpg" alt="체크코튼백" loading="lazy" /><figcaption>체크코튼백</figcaption></figure>
+        <figure><img src="/img/harness-cotton.jpg" alt="면사 인식표 하네스" loading="lazy" /><figcaption>면사 하네스</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo crayon">ol<b>1</b>dog</div>
+    <div class="footer-cols">
+      <div>
+        <h4>shop</h4>
+        <a data-store>네이버 스마트스토어</a>
+        <a data-insta>Instagram</a>
+      </div>
+      <div>
+        <h4>info</h4>
+        <p>컬러 유어 올리독</p>
+        <p>모든 제품은 주문 후 제작됩니다.</p>
+      </div>
+    </div>
+    <p class="disclaimer">이 페이지는 f33dbag 웹 포트폴리오용 컨셉 리디자인이며, 올리독의 공식 사이트가 아닙니다. 상품 정보·이미지 출처: 네이버 쇼핑 (2026.10).</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
